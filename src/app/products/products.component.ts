@@ -1,13 +1,14 @@
-import { Component, Signal } from '@angular/core';
+import { Component, Signal, WritableSignal, computed, signal } from '@angular/core';
 import { cateorySelected } from '../../utilities/signals/categories.signals';
 import { productList } from '../../utilities/signals/products.signals';
 import { TProductChosen } from '../../utilities/types/order.type';
-import { addToOrder, orderList, orderListEmpty } from '../../utilities/signals/order.signals';
+import { addToOrder } from '../../utilities/signals/order.signals';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
 })

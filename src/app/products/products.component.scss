@@ -10,8 +10,13 @@
 
   .product {
     padding: 2%;
+    display: none;
   }
-  
+
+  .hiddenProd{
+    display: block;
+  }
+
   .product:hover {
     background-color: lightgray;
     cursor: pointer;
