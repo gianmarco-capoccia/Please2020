@@ -1,0 +1,11 @@
+<ul class="products">
+  @for(product of products(); track product.id){ @if(product.categoryId ==
+  selectedCategoryId()){
+  <li class="product">
+    {{ product.name }}
+    <input [id]="product.id" type="number" value="0" />
+    <button class="handle-quantity-button" (click)="updateQuantityValue(product.id, ACTIONS.REMOVE)"> − </button>
+    <button class="handle-quantity-button" (click)="updateQuantityValue(product.id, ACTIONS.ADD)"> + </button>
+  </li>
+  } }
+</ul>

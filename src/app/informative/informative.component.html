@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <h1>PLEASE 2020</h1>
+  <h3>Recap Order</h3>
+  <hr />
+  <div class="recap-order">
+    <ul>
+      @for(product of order() ;track product){
+      <li>{{ product.idProduct }} - {{ product.quantity }}</li>
+      }
+    </ul>
+  </div>
+  <div class="wrapper-confirm-button">
+    <button
+      [disabled]="order_recap_empty()"
+      [ngClass]="{ disabled: order_recap_empty() }"
+      class="confirm-button"
+    >
+      Prosegui
+    </button>
+  </div>
+</div>
