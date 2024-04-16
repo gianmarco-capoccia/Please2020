@@ -4,6 +4,7 @@ import { productList } from '../../utilities/signals/products.signals';
 import { TProductChosen } from '../../utilities/types/order.type';
 import { addToOrder } from '../../utilities/signals/order.signals';
 import { CommonModule } from '@angular/common';
+import { count, doubleCount, prova } from '../../utilities/signals/prova.signals';
 
 @Component({
   selector: 'app-products',

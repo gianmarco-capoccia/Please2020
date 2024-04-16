@@ -11,8 +11,7 @@
   </div>
   <div class="wrapper-confirm-button">
     <button
-      [disabled]="order_recap_empty()"
-      [ngClass]="{ disabled: order_recap_empty() }"
+      [ngClass]="{ disabled: isOrderRecapEmpty() }"
       class="confirm-button"
     >
       Prosegui

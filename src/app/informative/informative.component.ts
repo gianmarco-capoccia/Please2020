@@ -12,5 +12,5 @@ import { CommonModule } from '@angular/common';
 })
 export class InformativeComponent {
    order: Signal<TOrderList> = orderList;
-   order_recap_empty : Signal<boolean> = orderListEmpty;
+   isOrderRecapEmpty : Signal<boolean> = orderListEmpty;
 }
