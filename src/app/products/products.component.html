@@ -1,23 +1,35 @@
+<div class="input-group">
+  <img class="search-icon" [src]="searchIcon" />
+  <input
+    class="research"
+    [(ngModel)]="digitedProductName"
+    (ngModelChange)="findProduct($event)"
+    type="text"
+    placeholder="Ricerca Prodotto"
+  />
+</div>
+
 <ul class="products">
-  @for(product of products(); track product.id){
-  <li
-    [ngClass]="{ hiddenProd: product.categoryId === selectedCategoryId() }"
-    class="product"
-  >
-    {{ product.name }}
-    <input [id]="product.id" type="number" value="0" />
-    <button
-      class="handle-quantity-button"
-      (click)="updateQuantityValue(product.id, ACTIONS.REMOVE)"
-    >
-      −
-    </button>
-    <button
-      class="handle-quantity-button"
-      (click)="updateQuantityValue(product.id, ACTIONS.ADD)"
-    >
-      +
-    </button>
+  @for(product of showedProducts(); track product.id){
+  <li class="product">
+    <div class="label-name-product">
+      {{ product.name }}
+    </div>
+    <div class="buttons-group">
+      <button
+        class="handle-quantity-button"
+        (click)="updateQuantityValue(product.id, ACTIONS.REMOVE)"
+      >
+        -
+      </button>
+      <p class="quantity-label" [id]="product.id">0</p>
+      <button
+        class="handle-quantity-button"
+        (click)="updateQuantityValue(product.id, ACTIONS.ADD)"
+      >
+        +
+      </button>
+    </div>
   </li>
   }
 </ul>

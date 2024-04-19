@@ -1,5 +1,5 @@
 export type TProductChosen = {
-    idProduct:number;
+    idProduct:string;
     quantity:number;
 }
 
